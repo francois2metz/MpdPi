@@ -1,12 +1,24 @@
-# Remote for mpd
+# MpdPi - Remote for MPD using a Raspberry Pi
 
-Simple remote for mpd, with a Raspberry Pi. There is a play/pause button and 2 leds to show the current status.
+Simple remote for mpd, with a Raspberry Pi.
+
+Features:
+
+* single play/pause button
+* Green Led to show the current status of mpd
+* Red Led to show errors
+
+## Schema
+
+TODO
 
 ## Install
 
     pip install -r requirements.txt
 
 ## Configuration
+
+TODO
 
 ## Usage
 
