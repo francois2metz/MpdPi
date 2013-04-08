@@ -60,8 +60,7 @@ with button_play, led_green, led_red:
       # MPD changed state
       if (fileno == client.fileno()):
         client.fetch_idle()
-        if ('player' in changed):
-          update_led_status(client, led_green)
+        update_led_status(client, led_green)
       # The button has changed state
       elif (fileno == button_play.fileno()):
         client._pending = []
