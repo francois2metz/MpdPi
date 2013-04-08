@@ -66,8 +66,8 @@ with button_play, led_green, led_red:
         client._pending = []
         client.noidle()
         client._read_line()
-        if (button_play.value == 1):
-            toggle_player_state(client)
+        if (button_play.value == 0):
+          toggle_player_state(client)
       else:
           print('unknown fileno', fileno, event)
       client.send_idle('player')
