@@ -14,6 +14,10 @@ TODO
 
 ## Install
 
+Python 3 is required.
+
+Install https://github.com/quick2wire/quick2wire-gpio-admin.
+
     pip install -r requirements.txt
 
 ## Configuration
