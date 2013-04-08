@@ -1,0 +1,2 @@
+python-mpd2==0.5.1
+git+git://github.com/quick2wire/quick2wire-python-api.git@0.0.0.2
