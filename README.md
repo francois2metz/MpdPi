@@ -10,7 +10,7 @@ Features:
 
 ## Schema
 
-TODO
+![](https://www.circuitlab.com/circuit/7tdxs9/screenshot/540x405/)
 
 ## Install
 
