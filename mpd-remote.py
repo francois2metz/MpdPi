@@ -30,9 +30,9 @@ def toggle_player_state(client):
 def blink_led(led):
   for i in range(0, 5):
     led.value = 1
-    time.sleep(1)
+    time.sleep(0.5)
     led.value = 0
-    time.sleep(1)
+    time.sleep(0.5)
 
 def mpd_connect(client, led):
   try:
