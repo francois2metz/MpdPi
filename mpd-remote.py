@@ -65,7 +65,11 @@ with button_play, led_green, led_red:
       elif (fileno == button_play.fileno()):
         client._pending = []
         client.noidle()
-        client._read_line()
+        status = client._read_list()
+        # In some case mpd has already write the changed line
+        if status is not None:
+          # So we need to fetch the result of the noidle
+          client._fetch_nothing()
         if (button_play.value == 0):
           toggle_player_state(client)
       else:
