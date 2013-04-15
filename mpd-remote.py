@@ -5,7 +5,7 @@ import select
 import mpd
 import time
 
-button_play = pins.pin(4, direction=In, interupt=Falling) # 23
+button_play = pins.pin(4, direction=In, interrupt=Falling) # 23
 led_green = pins.pin(1, direction=Out) # 18
 led_red = pins.pin(6, direction=Out) # 25
 
