@@ -24,7 +24,7 @@ Install https://github.com/quick2wire/quick2wire-gpio-admin.
 
 ## Configuration
 
-TODO
+We use [toml](https://github.com/mojombo/toml). Edit *config.toml* with your mpd host/port/password and you are done.
 
 ## Usage
 
