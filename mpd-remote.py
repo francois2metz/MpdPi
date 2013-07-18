@@ -4,6 +4,7 @@ from quick2wire.gpio import pins, In, Out, Falling
 import select
 import mpd
 import time
+import toml
 
 button_play = pins.pin(4, direction=In, interrupt=Falling) # 23
 led_green = pins.pin(1, direction=Out) # 18
@@ -35,9 +36,13 @@ def blink_led(led):
     time.sleep(0.5)
 
 def mpd_connect(client, led):
+  with open("config.toml") as conffile:
+    config = toml.loads(conffile.read())
+
   try:
-    client.connect("localhost", 6600)
-    #client.password()
+    client.connect(config['mpd']['host'], config['mpd']['port'])
+    if 'password' in config['mpd']:
+      client.password(config['mpd']['password'])
   except IOError as e:
     print("cannot connect to mpd")
     blink_led(led)
